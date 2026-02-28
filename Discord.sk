@@ -1,0 +1,57 @@
+# ====================================
+#        Skript By javajeno!
+# ====================================
+#   /discord Command System
+# ====================================
+#
+#   SETUP GUIDE:
+#   1. Place this file in your
+#      plugins/Skript/scripts/ folder
+#   2. Run /skript reload <filename>
+#      to load the script
+#   3. Replace the discord link with
+#      your own server's invite link
+#   4. Thats it! You're all set.
+#
+# ====================================
+
+options:
+    # The sound played when the command is used
+    # Full list of sounds: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+    SoundD: BLOCK_NOTE_BLOCK_PLING
+
+    # Volume of the sound (1 = normal)
+    SoundD-Volume: 1
+
+    # Pitch of the sound (1 = normal, 2 = higher)
+    SoundD-Pitch: 2
+
+    # The color used for the message formatting
+    # Change the hex code to any color you like!
+    # You can use https://www.color-hex.com/ to find hex codes
+    color: <##8400FF>
+
+# ====================================
+#   /discord Command
+#   Sends the player a formatted
+#   Discord invite message with
+#   a clickable invite link
+# ====================================
+command /discord:
+    trigger:
+        # Sends the formatted Discord message to the player
+        send "" to player
+        send "{@color} 🛡 &lSERVER DISCORD &r{@color}🛡" to player
+        send "{@color} &m------------------------------" to player
+        send "&7  Join our {@color}ᴅɪꜱᴄᴏʀᴅ&7 community and be part of:" to player
+        send "{@color}  ➤ &fᴇᴠᴇɴᴛꜱ" to player
+        send "{@color}  ➤ &fɢɪᴠᴇᴀᴡᴀʏꜱ" to player
+        send "{@color}  ➤ &fᴄᴏᴍᴍᴜɴɪᴛʏ ᴄʜᴀᴛꜱ" to player
+        send "" to player
+        send "{@color} &lᴄʟɪᴄᴋ ᴛᴏ ᴊᴏɪɴ" to player
+        # Replace the Discord link below with your own invite!
+        send "{@color}  ➥ &n<link:https://discord.gg/YourSMP>discord.gg/YourSMP" to player
+        send "{@color} &m------------------------------" to player
+        send "" to player
+        # Plays the configured sound to the player
+        play sound "{@SoundD}" with volume {@SoundD-Volume} and pitch {@SoundD-Pitch}
